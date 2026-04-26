@@ -328,13 +328,79 @@
             <!-- Project Grid -->
             <div class="min-h-screen py-20">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div id="exotica-back-btn" class="hidden mb-6 text-right fade-in">
+                        <button onclick="toggleExoticaPhases(false)" class="text-gold hover:text-white text-sm uppercase tracking-widest font-bold transition">
+                            <i class="fas fa-arrow-left mr-2"></i> Back to Collections
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
 
-                        <!-- Card 1 -->
-                        <div
-                            class="bg-black/40 backdrop-blur-xl group hover:shadow-2xl transition duration-500 ease-in-out border border-yellow-500/20">
+                        <!-- Card 1: Nikunj -->
+                        <div id="card-nikunj"
+                            class="project-card bg-black/40 backdrop-blur-xl group hover:shadow-2xl transition duration-500 ease-in-out border border-yellow-500/20">
+                            <div class="relative overflow-hidden h-80">
+                                <img src="assets/images/Profile Card Nikunj.png" alt="Nikunj"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                                <div
+                                    class="absolute bottom-0 left-0 bg-black/80 text-gold px-6 py-2 uppercase text-xs tracking-widest font-bold">
+                                    Completed
+                                </div>
+                            </div>
+                            <div class="p-8 text-center">
+                                <h3 class="font-heading text-3xl font-bold text-white mb-2">Nikunj</h3>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest mb-6">Tezpur</p>
+                                <p class="text-gray-300 font-light mb-8 line-clamp-2">
+                                    A vision of luxurious living, 'Nikunj' offers an unparalleled blend of modern
+                                    aesthetics and comfort.
+                                </p>
+                                <div class="flex flex-col sm:flex-row justify-center gap-3">
+                                    <button onclick="openGallery('nikunj')"
+                                        class="flex-1 border border-gold text-gold px-4 py-3 text-xs font-bold uppercase tracking-widest hover:bg-gold hover:text-black hover:border-gold transition">
+                                        View Images
+                                    </button>
+                                    <a href="#" download
+                                        class="flex-1 bg-gold text-black px-4 py-3 text-xs font-bold uppercase tracking-widest hover:bg-goldhover transition text-center flex items-center justify-center">
+                                        Download Brochure
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Exotica Parent -->
+                        <div id="card-exotica-parent"
+                            class="project-card bg-black/40 backdrop-blur-xl group hover:shadow-2xl transition duration-500 ease-in-out border border-yellow-500/20">
                             <div class="relative overflow-hidden h-80">
                                 <img src="assets/images/Profile Card Exotica.png" alt="Exotica"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-10 transition">
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 bg-black/80 text-gold px-6 py-2 uppercase text-xs tracking-widest font-bold">
+                                    Multiple Phases
+                                </div>
+                            </div>
+                            <div class="p-8 text-center">
+                                <h3 class="font-heading text-3xl font-bold text-white mb-2">Exotica</h3>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest mb-6">Mazgaon, Tezpur</p>
+                                <p class="text-gray-300 font-light mb-8 line-clamp-2">
+                                    A masterpiece of modern engineering. 'Exotica' blends lush green landscapes with
+                                    ultra-luxury 3BHK residences across multiple phases.
+                                </p>
+                                <div class="flex flex-col sm:flex-row justify-center gap-3">
+                                    <button onclick="toggleExoticaPhases(true)"
+                                        class="flex-1 border border-gold text-gold px-4 py-3 text-xs font-bold uppercase tracking-widest hover:bg-gold hover:text-black hover:border-gold transition w-full">
+                                        Explore Phases
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Exotica Phase I -->
+                        <div id="card-exotica-phase1"
+                            class="project-card hidden bg-black/40 backdrop-blur-xl group hover:shadow-2xl transition duration-500 ease-in-out border border-yellow-500/20 fade-in">
+                            <div class="relative overflow-hidden h-80">
+                                <img src="assets/images/Profile Card Exotica.png" alt="Exotica Phase I"
                                     class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                                 <div
                                     class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-10 transition">
@@ -345,7 +411,7 @@
                                 </div>
                             </div>
                             <div class="p-8 text-center">
-                                <h3 class="font-heading text-3xl font-bold text-white mb-2">Exotica</h3>
+                                <h3 class="font-heading text-3xl font-bold text-white mb-2">Exotica Phase I</h3>
                                 <p class="text-xs text-gray-500 uppercase tracking-widest mb-6">Mazgaon, Tezpur</p>
                                 <p class="text-gray-300 font-light mb-8 line-clamp-2">
                                     A masterpiece of modern engineering. 'Exotica' blends lush green landscapes with
@@ -364,11 +430,11 @@
                             </div>
                         </div>
 
-                        <!-- Card 2 -->
-                        <div
-                            class="bg-black/40 backdrop-blur-xl group hover:shadow-2xl transition duration-500 ease-in-out border border-yellow-500/20">
+                        <!-- Card 4: Exotica Phase II -->
+                        <div id="card-exotica-phase2"
+                            class="project-card hidden bg-black/40 backdrop-blur-xl group hover:shadow-2xl transition duration-500 ease-in-out border border-yellow-500/20 fade-in">
                             <div class="relative overflow-hidden h-80">
-                                <img src="assets/images/Profile Card Exotica Phase 2.png" alt="River View"
+                                <img src="assets/images/Profile Card Exotica Phase 2.png" alt="Exotica Phase II"
                                     class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                                 <div
                                     class="absolute bottom-0 left-0 bg-gold text-richblack px-6 py-2 uppercase text-xs tracking-widest font-bold">
@@ -394,7 +460,6 @@
                                 </div>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -438,8 +503,9 @@
                                     class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Interest</label>
                                 <select name="Interest"
                                     class="w-full border-b-2 border-gray-700 py-3 text-white bg-transparent focus:outline-none focus:border-gold transition">
-                                    <option class="text-black">BnB Exotica Phase I</option>
-                                    <option class="text-black">BnB Exotica Phase II</option>
+                                    <option class="text-black">B&B's Exotica Phase I</option>
+                                    <option class="text-black">B&B's Exotica Phase II</option>
+                                    <option class="text-black">Nikunj</option>
                                     <option class="text-black">General Enquiry</option>
                                 </select>
                             </div>
@@ -584,6 +650,27 @@
 
     <!-- JAVASCRIPT -->
     <script>
+        function toggleExoticaPhases(showPhases) {
+            const parent = document.getElementById('card-exotica-parent');
+            const phase1 = document.getElementById('card-exotica-phase1');
+            const phase2 = document.getElementById('card-exotica-phase2');
+            const backBtn = document.getElementById('exotica-back-btn');
+            const nikunj = document.getElementById('card-nikunj');
+            
+            if (showPhases) {
+                if (parent) parent.classList.add('hidden');
+                if (nikunj) nikunj.classList.add('hidden');
+                if (phase1) phase1.classList.remove('hidden');
+                if (phase2) phase2.classList.remove('hidden');
+                if (backBtn) backBtn.classList.remove('hidden');
+            } else {
+                if (parent) parent.classList.remove('hidden');
+                if (nikunj) nikunj.classList.remove('hidden');
+                if (phase1) phase1.classList.add('hidden');
+                if (phase2) phase2.classList.add('hidden');
+                if (backBtn) backBtn.classList.add('hidden');
+            }
+        }
         function navigateTo(pageId) {
             const mobileMenu = document.getElementById('mobile-menu');
             if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
@@ -662,6 +749,10 @@
 
             ],
             'river_view': [
+                // { src: 'assets/images/Exotica 2 images/rv1.png', caption: '' },
+                // { src: 'assets/images/Exotica 2 images/rv2.png', caption: '' }
+            ],
+            'nikunj': [
                 { src: 'assets/images/Exotica 2 images/rv1.png', caption: '' },
                 { src: 'assets/images/Exotica 2 images/rv2.png', caption: '' }
             ]
